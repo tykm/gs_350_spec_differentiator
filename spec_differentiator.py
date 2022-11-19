@@ -19,9 +19,29 @@ trim_specs = [
 if len(trim_names) != len(trim_specs):
     print("Amount of trim names and specs do not match. Please recheck configuration")
 
+# Main logic
+ll = format(trim_specs[0])
+lt = format(trim_specs[1])
+lx = format(trim_specs[2])
+ly = format(trim_specs[3])
+
+print("LL:")
+print(ll)
+print()
+print("LT:")
+print(lt - ll)
+print()
+print("LX:")
+print(lx - ll)
+print()
+print("LY:")
+print(ly - lx)
+
 # Loop through trims
+'''
 for i in range(len(trim_names)):
     spec_list = format(trim_specs[i])
     print(trim_names[i])
     printer(spec_list)
     print()
+'''
