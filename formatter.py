@@ -9,6 +9,7 @@ def format(details: str) -> set:
     for let in details:
         if let ==';':
             output.add("".join(chars))
+            chars.clear()
             pass
         chars.append(let)
     return output
