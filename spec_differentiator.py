@@ -1,4 +1,5 @@
 from formatter import format
+from printer import printer
 
 # Defining trim names and details
 trim_names = [
@@ -20,6 +21,7 @@ if len(trim_names) != len(trim_specs):
 
 # Loop through trims
 for i in range(len(trim_names)):
+    spec_list = format(trim_specs[i])
     print(trim_names[i])
-    print(format(trim_specs[i]))
+    printer(spec_list)
     print()
