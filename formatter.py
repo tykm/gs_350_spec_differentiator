@@ -6,11 +6,18 @@ Iterate through the list while appending chars to a letterbank, searching for th
 def format(details: str) -> set:
     output = set()
     chars = list()
+    skip = False
     for let in details:
+        # Skip iteration
+        if skip:
+            skip = False
+            continue
+        # If we find a ';', build the string then skip the starting ' ' char at the beginning of each trim detail
         if let ==';':
             output.add("".join(chars))
             chars.clear()
-            pass
+            skip = True
+            continue
         chars.append(let)
     return output
         
